@@ -3,12 +3,12 @@ import React from "react";
 export class Counter extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {seconds: props.seconds}
+        this.state = {seconds: props.startSeconds}
     }
 
     componentDidMount() {
-        this.tickTimerId = setInterval(() => this.tick(), 1000)
-        setTimeout(() => this.turnOffTimer(), 11000)
+        this.tickTimerId = setInterval(() => this.tick(), this.props.tickInterval)
+
     }
 
     componentWillUnmount() {
@@ -16,6 +16,10 @@ export class Counter extends React.Component {
     }
 
     tick() {
+        if (this.state.seconds === this.props.endSeconds) {
+            this.turnOffTimer()
+            return
+        }
         this.setState((prevState) => {
             return {seconds: prevState.seconds + 1 }
             }

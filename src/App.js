@@ -5,8 +5,8 @@ import {Counter} from "./Counter";
 function App() {
   return (
       <div className="centered">
-        <Counter name="first" seconds={0} />
-        <Counter name="second" seconds={10} />
+        <Counter name="first" startSeconds={0} tickInterval={1000} endSeconds={10} />
+        <Counter name="second" startSeconds={10} tickInterval={1000} endSeconds={20}/>
       </div>
   );
 }
