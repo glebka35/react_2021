@@ -2,6 +2,32 @@
   text-align: center;
 }
 
+.counter {
+  background-color: rgb(245, 245, 220);
+  border: solid green 1px;
+}
+
+.centered {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.centeredText {
+  text-align: center;
+}
+
+.bigText {
+  font-weight: bold;
+  font-size: 40px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

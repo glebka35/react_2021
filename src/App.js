@@ -1,24 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import {Counter} from "./Counter";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="centered">
+        <Counter name="first" startSeconds={0} tickInterval={1000} endSeconds={10} />
+        <Counter name="second" startSeconds={10} tickInterval={1000} endSeconds={20}/>
+      </div>
   );
 }
 
