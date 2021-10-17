@@ -2,10 +2,6 @@ import React from "react";
 import {InputField} from "./InputField";
 
 export class InputForm extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <div>

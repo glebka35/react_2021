@@ -1,5 +1,3 @@
-import './App.css';
-import {Counter} from "./Counter";
 import {Form} from "./Form/Form";
 
 
