@@ -31,14 +31,11 @@ function useGithubData(username) {
         email: ""
     })
     useEffect(() => {
-        const fetchData = async () => {
-            let result = await request(`GET /users/${username}`, {
-                username: 'username'
-            })
-
-            setData(result.data);
-        };
-        fetchData();
+        request(`GET /users/${username}`, {
+            username: 'username'
+        }).then(result => {
+            setData(result.data)
+        })
     }, [username]);
     return data
 }
