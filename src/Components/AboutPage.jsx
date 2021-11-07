@@ -32,7 +32,7 @@ function useGithubData(username) {
     })
     useEffect(() => {
         const fetchData = async () => {
-            let result = await request('GET /users/' + username, {
+            let result = await request(`GET /users/${username}`, {
                 username: 'username'
             })
 
